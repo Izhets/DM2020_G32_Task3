@@ -25,7 +25,7 @@ public class BubbleSort {
             for (int j = 0; j < nMinusOne - i; j++) {
                 count++;
                 if (array[j] > array[j + 1]) {
-                    count++;
+                    //count++;
                     swap(array, j, j + 1);
                     isSorted = false;
                 }

@@ -29,10 +29,8 @@ private static int countReal = 0;
         // Пока разница между элементами есть
         while (d >= 1) {
             for (int right = 0; right < arr.length; right++) {
-                countReal++;
-                count =  right;
+                count++;
                 for (int c = right - d; c >= 0; c -= d) {
-
                     if (arr[c] > arr[c + d]) {
                         swap(arr, c, c + d);
                     }
@@ -42,9 +40,6 @@ private static int countReal = 0;
             d = d / 2;
         }
 
-        if (count == arr.length-1){
-            countReal = arr.length-1;
-        }
 
        return arr;
     }
@@ -52,11 +47,12 @@ private static int countReal = 0;
 //Можно выбрать любой шаг
 //    public static int[] shellSort(int[] arr){
 //        int i, j, k, h, m=0, b=arr.length;
-//        int[] d = {1, 4, 6};
+//        int[] d = {3};
 //        while (d[m] < b) ++m;
 //        while (--m >= 0){
 //            k = d[m];
 //            for (i = k; i < b; i++){     // k-сортировка
+//                count++;
 //                j=i;
 //                h=arr[i];
 //                while ((j >= k) && (arr[j-k] > h)){
